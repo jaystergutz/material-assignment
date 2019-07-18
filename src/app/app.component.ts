@@ -13,7 +13,7 @@ export class AppComponent {
   job = {
     jobTitle: "Web Designer",
     employer: "Yoda Inc.",
-    icon: "/assets/img/sample_employer_icon.png",
+    icon: "../../assets/img/sample_employer_icon.png",
     compensation: {
       type: "Monthly",
       amount: 1500
