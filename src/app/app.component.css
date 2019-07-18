@@ -1,0 +1,33 @@
+.employer_icon {
+    margin-block-start: 15%;
+    margin-block-end: 5%;
+    width: 15%;
+    height: 15%
+}
+
+
+.right-most {
+    flex: 1 1 auto;
+}
+
+.rounded_card {
+    border-radius: 25px;
+}
+
+.my_toolbar {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.row{
+    padding: 0 25px;
+    margin: 0%;
+    
+}
+
+.mat-button{
+    padding: 0%;
+    min-width: 10px;
+}

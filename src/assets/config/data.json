@@ -1,0 +1,24 @@
+{
+    "jobTitle" : "Web Designer",
+    "employer" : "Yda Inc.",
+
+    "compensation" : {
+        "type" : "Monthly",
+        "amount"  : 1500
+    },
+
+    "applicationDeadline" : "2018-11-01T09:00:00.000Z",
+
+    "location" : "Mountain View, California",
+
+    "description" : "We are a new Fast Casual Restaurant here in the Dhaka on the corner of Gulshan ave! We have a few more positions left for energetic, enthusiastic web designer to work full time for the restaurant.",
+
+    "qualifications" : ["3 years relevant work experience required",
+                        "High school or higher level of education",
+                        "Speak English",
+                        "Professional reference needed"],
+
+    "responsibilities" : ["A web designer/developer is responsible for the design, layout and coding of a website.",
+                            "They are involved with the technical and graphical aspects of a website; how the site works and how it looks. ",
+                        "They can also be involved with the maintenance and update of an existing site."]
+}

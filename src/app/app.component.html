@@ -1,1 +1,94 @@
-<mat-toolbar> <i class="material-icons">arrow_back</i>&nbsp;{{pageTitle}}</mat-toolbar>
+
+<div class="container-fluid">
+
+    <mat-card class="rounded_card">
+
+        <mat-toolbar class="my_toolbar">
+            <button mat-button>
+                <i class="material-icons">arrow_back</i>
+            </button>
+
+            <span>{{pageTitle}}</span>
+
+            <!-- This fills the remaining space of the current row -->
+            <span class="right-most"></span>
+
+            <button mat-button>
+                <i class="material-icons green">share</i>&nbsp;
+                <span style="color: rgba(56, 191, 56, 0.65);">Share</span>
+            </button>
+
+
+        </mat-toolbar>
+        <div class="row">
+            <div class="col-md-12 ">
+                <img class="center-block employer_icon responsive" [src]="job.icon" alt="Employer Icon">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12"></div>
+            <span style="font-size:3.5vw;" #jobTitle>{{job.jobTitle}}</span>
+        </div>
+        <div class="row">
+            <span style="font-size:2.2vw;">{{job.employer}}</span>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <span style="color:rgba(56, 191, 56, 0.65);">
+                ${{job.compensation.amount}} / {{job.compensation.type}}
+            </span>
+        </div>
+
+        <div class="row">
+
+            <i class="material-icons green">access_time</i>&nbsp;
+            <span>Apply before {{job.applicationDeadline | date:format}} </span>
+
+        </div>
+
+        <div class="row">
+            <i class="material-icons green">location_on</i>&nbsp;
+            <span> {{job.location}} </span>
+        </div>
+
+
+        <hr style="border-top: 15px solid #eee;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Job Description</h4>
+                    <line-clamp row="2">
+                        <div #content>
+                            {{job.description}}
+                        </div>
+                    </line-clamp>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Minimum Qualifications</h4>
+                    <ul>
+                        <li *ngFor="let qual of job.qualifications"> {{qual}} </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Responsibilities</h4>
+                    <mat-list role="list">
+                        <span *ngFor="let resp of job.responsibilities"> {{resp}} <br> </span>
+                    </mat-list>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+
+</div>
