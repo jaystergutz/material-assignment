@@ -20,5 +20,6 @@
 
     "responsibilities" : ["A web designer/developer is responsible for the design, layout and coding of a website.",
                             "They are involved with the technical and graphical aspects of a website; how the site works and how it looks. ",
-                        "They can also be involved with the maintenance and update of an existing site."]
+                        "They can also be involved with the maintenance and update of an existing site."],
+  "icon" : "https://github.com/gjester18/material-assignment/blob/master/src/assets/img/sample_employer_icon.png?raw=true"
 }

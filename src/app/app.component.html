@@ -1,25 +1,10 @@
 
-<div class="container-fluid">
+<div class="container">
 
-    <mat-card class="rounded_card">
+    <mat-card class="rounded_card" *ngIf="job != undefined;">
 
-        <mat-toolbar class="my_toolbar">
-            <button mat-button>
-                <i class="material-icons">arrow_back</i>
-            </button>
+        <app-toolbar [title]="pageTitle"></app-toolbar>
 
-            <span>{{pageTitle}}</span>
-
-            <!-- This fills the remaining space of the current row -->
-            <span class="right-most"></span>
-
-            <button mat-button>
-                <i class="material-icons green">share</i>&nbsp;
-                <span style="color: rgba(56, 191, 56, 0.65);">Share</span>
-            </button>
-
-
-        </mat-toolbar>
         <div class="row">
             <div class="col-md-12 ">
                 <img class="center-block employer_icon responsive" [src]="job.icon" alt="Employer Icon">
@@ -62,9 +47,9 @@
                 <div class="col-md-12">
                     <h4>Job Description</h4>
                     <line-clamp row="2">
-                        <div #content>
+                        <p #content>
                             {{job.description}}
-                        </div>
+                        </p>
                     </line-clamp>
 
                 </div>
@@ -90,5 +75,7 @@
             </div>
         </div>
     </mat-card>
+
+  <app-fab-button></app-fab-button>
 
 </div>

@@ -6,28 +6,21 @@
 }
 
 
-.right-most {
-    flex: 1 1 auto;
-}
 
 .rounded_card {
     border-radius: 25px;
+    padding: 0;
 }
 
-.my_toolbar {
-    background: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
+
 
 .row{
     padding: 0 25px;
-    margin: 0%;
+    margin: 0;
     
 }
 
 .mat-button{
-    padding: 0%;
+    padding: 0;
     min-width: 10px;
 }
