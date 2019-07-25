@@ -1,0 +1,19 @@
+.fab-container {
+  position: fixed;
+  bottom: 6vh;
+  right: 7vw;
+  z-index: 100;
+
+}
+
+
+button{
+  border-radius: 20px;
+  background-color: green ;
+}
+
+.white{
+  color : white;
+  margin-right: 6px;
+
+}

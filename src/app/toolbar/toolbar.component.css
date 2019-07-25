@@ -1,0 +1,16 @@
+.right-most {
+  flex: 1 1 auto;
+}
+.my_toolbar {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px 5px 10px 0px;
+  border-radius : 10px;
+}
+
+
+.green{
+    color : rgba(56, 191, 56, 0.65);
+}
