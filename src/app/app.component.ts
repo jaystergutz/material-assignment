@@ -10,17 +10,17 @@ import {Job} from './domain/Job';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  pageTitle: String = "";
-  format: String = "MMM d, y, h:mm:ss a";
+  private pageTitle: String = "";
+  private format: String = "MMM d, y, h:mm:ss a";
 
 
-  @ViewChild('jobTitle') jobTitle : ElementRef;
+  @ViewChild('jobTitle') private jobTitle : ElementRef;
 
 
-  interval : any;
-  job : Job;
+  private interval : any;
+  private job : Job;
 
-  constructor(private httpClient : HttpClient){
+  constructor(private httpClient : HttpClient, private elementRef : ElementRef){
 
   }
 
@@ -29,6 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.setupToolbarTitle();
 
     this.bootstrapData();
+
+    this.setBodyBackground("green");
   }
 
   private bootstrapData() {
@@ -58,4 +60,10 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
 
+  private setBodyBackground(color: string) {
+
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = color;
+  }
+
+  
 }

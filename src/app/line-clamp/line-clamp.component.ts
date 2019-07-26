@@ -7,7 +7,8 @@ import {
     Input,
     ViewChild,
   } from '@angular/core';
-  
+// import {el} from "@angular/platform-browser/testing/src/browser_util";
+
   @Component({
     selector: 'line-clamp',
     templateUrl: './line-clamp.component.html',
@@ -31,10 +32,8 @@ import {
         // calc the content height and the box height
         const contentElm = this.content.nativeElement;
         const contentHeight = parseInt(
-          window
-            .getComputedStyle(contentElm, undefined)
-            .getPropertyValue('height'),
-          10
+          window.getComputedStyle(contentElm, undefined).getPropertyValue('height')
+
         );
         this.boxHeight = getLineHeight(contentElm) * this.row;
         if (contentHeight > this.boxHeight) {
@@ -49,9 +48,7 @@ import {
       this.opened ? this.close() : this.open();
     }
   
-    /**
-     * show more/less 機能を有効にする
-     */
+
     private enable() {
       this.enabled = true;
       this.close();
@@ -76,9 +73,10 @@ import {
   
   function getLineHeight(element: HTMLElement): number {
     let lineHeight = parseInt(
-      window.getComputedStyle(element, undefined).getPropertyValue('lineHeight'),
-      10
+      window.getComputedStyle(element, undefined).getPropertyValue('lineHeight')
+
     );
+
     if (isNaN(lineHeight)) {
       const clone = element.cloneNode() as HTMLElement;
       clone.innerHTML = '<br>';

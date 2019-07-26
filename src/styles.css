@@ -1,9 +1,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
- body {
+body {
       padding: 10px;
-       
+
 } 
 
 .material-icons.green { color: rgba(56, 191, 56, 0.65); }
